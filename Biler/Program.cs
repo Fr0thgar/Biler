@@ -10,14 +10,21 @@ namespace Biler
     {
         static void Main(string[] args)
         {
+            Trailer trailer = new Trailer();
+
             Car citroenCar = new Car("Citroën", "Cactus", 2014);
+            Console.WriteLine(citroenCar);
+            citroenCar.attachTrailer(trailer);
+            Console.WriteLine(citroenCar);
+            trailer.fillTrailer("Hækkeaffald");
+            trailer.fillTrailer("Gl. Cykel");
+            Console.WriteLine(citroenCar);
 
             Car audicCar = new Car("Audi", "R8", 2008, "Sort", "AB12345", true);
             Console.WriteLine(audicCar);
             Console.WriteLine(citroenCar);
 
             Console.WriteLine("Trailer test");
-            Trailer trailer = new Trailer();
 
             trailer.fillTrailer("Hækkeaffald");
             Console.WriteLine(trailer);

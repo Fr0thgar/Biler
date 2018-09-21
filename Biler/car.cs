@@ -12,6 +12,8 @@ namespace Biler
         private string color;
         private string licenseplate;
 
+        private Trailer trailer;
+
         public Car(String brand, String model, int year, string color, string licenseplate, bool benzin) 
             : this(brand, model, year)
         {
@@ -59,9 +61,14 @@ namespace Biler
             get { return year; }
         }
 
-        public void Gear()
+        public void attachTrailer(Trailer trailer)
         {
+            this.trailer = trailer;
+        }
 
+        public double Gear()
+        {
+            return 1;
         }
 
 //        public override string ToString()
